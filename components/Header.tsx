@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsList, BsX } from "react-icons/bs";
@@ -11,6 +13,8 @@ const styles = {
 };
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
     <header>
       <nav className="w-full h-24 shadow-xl bg-black">
@@ -40,10 +44,16 @@ function Header() {
           </div>
 
           {/* {mobile menu} */}
-          <div className="sm:hidden cursor-pointer pl-24">
+          <div onClick={toggleMenu} className="sm:hidden cursor-pointer pl-24">
             <BsList className="h-8 w-8 text-[#FF5733]" />
 
-            <div className="fixed top-0 left-0 w-[75%] sm-hidden h-screen bg-[#ecf0f3] p-10 ease-in-out duration-500">
+            <div
+              className={
+                menuOpen
+                  ? "fixed top-0 left-0 w-[75%] sm-hidden h-screen bg-[#ecf0f3] p-10 ease-in-out duration-500"
+                  : "fixed left-[-100%] top-0 p-10 ease-in-out duration-500"
+              }
+            >
               <div className="flex w-full items-center justify-end">
                 <div className="cursor-pointer">
                   <BsX className="h-8 w-8 text-[color:var(--hover-color)]" />
@@ -83,9 +93,9 @@ function Header() {
                 })}
               </div>
               <Image
-                src="/images/hhlogo-white.png"
+                src="/images/hh_black.png"
                 alt="lgog image"
-                width={205}
+                width={400}
                 height={75}
                 className="cursor-pointer pt-10 mx-auto"
               />
