@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Calendar from "@/components/Calendar";
 import "./globals.css";
 
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="">
         <Header />
         <Hero />
+        <Calendar />
         {children}
       </body>
     </html>
