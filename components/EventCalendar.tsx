@@ -1,6 +1,7 @@
 import React from "react";
 import { Event } from "./constants/types";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   events: Event[];
@@ -28,10 +29,12 @@ const EventCalendar: React.FC<Props> = ({ events }) => {
             <h2 className="text-xl font-semibold">{event.title}</h2>
             <p className="text-gray-600">{event.date}</p>
             <p className="mt-2">{event.description}</p>
-            {event.image && (
-              <img
-                src={event.image}
+            {event.imageLink && (
+              <Image
+                src={event.imageLink}
                 alt={event.title}
+                width={100}
+                height={100}
                 className="mt-4 mx-auto max-w-full h-auto"
               />
             )}

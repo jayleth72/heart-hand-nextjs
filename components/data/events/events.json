@@ -3,21 +3,21 @@
     "title": "Event 1",
     "date": "2024-02-10",
     "description": "Description of Event 1",
-    "image": "./data/events/event-images/event1.jpg",
-    "link": "./data/events/event-images/event1.jpg"
+    "imageLink": "/images/event-images/event1.jpg",
+    "link": "https://www.gardenhomeschooling.com/"
   },
   {
     "title": "Event 2",
     "date": "2024-02-15",
     "description": "Description of Event 2",
-    "image": "./events/event-images/event2.jpg",
+    "imageLink": "/images/event-images/event2.jpg",
     "link": "https://www.gardenhomeschooling.com/"
   },
   {
     "title": "Event 3",
     "date": "2024-02-20",
     "description": "Description of Event 3",
-    "image": "./data/events/event-images/event3.jpg",
+    "imageLink": "/images/event-images/event3.jpg",
     "link": "https://www.gardenhomeschooling.com/"
   }
 ]
