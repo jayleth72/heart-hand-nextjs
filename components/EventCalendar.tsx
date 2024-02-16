@@ -29,7 +29,7 @@ const EventCalendar: React.FC<Props> = ({ events }) => {
             <h2 className="text-xl font-semibold">{event.title}</h2>
             <p className="text-gray-600">{event.date}</p>
             <p className="mt-2">{event.description}</p>
-            {event.imageLink && (
+            {/* {event.imageLink && (
               <Image
                 src={event.imageLink}
                 alt={event.title}
@@ -37,7 +37,7 @@ const EventCalendar: React.FC<Props> = ({ events }) => {
                 height={100}
                 className="mt-4 mx-auto max-w-full h-auto"
               />
-            )}
+            )} */}
             {event.link && (
               <Link
                 href={event.link}
