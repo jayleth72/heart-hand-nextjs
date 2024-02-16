@@ -38,7 +38,7 @@ const EventCalendar: React.FC<Props> = ({ events }) => {
                 className="mt-4 mx-auto max-w-full h-auto"
               />
             )} */}
-            {event.link && (
+            {/* {event.link && (
               <Link
                 href={event.link}
                 className="block mt-2 text-blue-700 underline"
@@ -47,7 +47,7 @@ const EventCalendar: React.FC<Props> = ({ events }) => {
               >
                 More Details
               </Link>
-            )}
+            )} */}
           </div>
         </div>
       ))}
